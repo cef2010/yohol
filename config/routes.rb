@@ -1,11 +1,19 @@
 Rails.application.routes.draw do
+
+#devise
+  devise_for :users, controllers: {registrations: 'registrations'}
+
+#root
   root 'static_pages#about'
 
-  get '/about', to: 'static_pages#about', as: 'about'
-  get '/contact', to: 'static_pages#contact', as: 'contact'
-  get '/faq', to: 'static_pages#faq', as: 'faq'
-  devise_for :users
+#static pages
+    get '/about', to: 'static_pages#about', as: 'about'
+    get '/contact', to: 'static_pages#contact', as: 'contact'
+    get '/faq', to: 'static_pages#faq', as: 'faq'
+
+ #crud
   resources :goals
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
