@@ -7,7 +7,7 @@ class CreateGoals < ActiveRecord::Migration
       t.float :price
       t.integer :likes
       t.integer :difficulty
-
+      t.belongs_to :user
       t.timestamps null: false
     end
   end

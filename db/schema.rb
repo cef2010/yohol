@@ -16,13 +16,6 @@ ActiveRecord::Schema.define(version: 20150928230041) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "bucket_lists", force: :cascade do |t|
-    t.integer  "user_id"
-    t.integer  "goal_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "goals", force: :cascade do |t|
     t.string   "title"
     t.text     "description"
@@ -30,6 +23,7 @@ ActiveRecord::Schema.define(version: 20150928230041) do
     t.float    "price"
     t.integer  "likes"
     t.integer  "difficulty"
+    t.integer  "user_id"
     t.datetime "created_at",                           null: false
     t.datetime "updated_at",                           null: false
     t.string   "picture_file_name"

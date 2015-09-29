@@ -1,6 +1,5 @@
 class Goal < ActiveRecord::Base
-  has_many :bucket_lists
-  has_many :users, through: :bucket_lists
+  belongs_to :user
 
   validates :title, presence: true
   validates :description, presence: true
