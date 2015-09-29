@@ -3,6 +3,8 @@ class UsersController < ApplicationController
   end
 
   def show
+    @user = User.find(params[:id])
+    @goals = Goal.goal_finder(@user)
   end
 
 

@@ -10,5 +10,9 @@ class User < ActiveRecord::Base
   has_many :bucket_lists
   has_many :goals, through: :bucket_lists
 
+  # 
+  # def self.goal_finder(user)
+  #   self.where()
+  # end
 
 end

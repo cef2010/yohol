@@ -460,7 +460,7 @@
       "/Users/trevorslater/Documents/Class_assignments/rails projects/yohol/spec/factories/users.rb": [
         1,
         1,
-        11,
+        7,
         1,
         1,
         1,
@@ -574,50 +574,25 @@
         1,
         null
       ],
-      "/Users/trevorslater/Documents/Class_assignments/rails projects/yohol/app/controllers/goals_controller.rb": [
-        1,
+      "/Users/trevorslater/Documents/Class_assignments/rails projects/yohol/app/controllers/users_controller.rb": [
         1,
         1,
         null,
         null,
         1,
-        null,
-        null,
-        null,
-        1,
-        4,
-        1,
-        null,
+        3,
+        3,
         3,
         null,
         null,
         null,
-        1,
-        1,
         null,
-        null,
-        1,
-        4,
-        4,
-        1,
-        null,
-        3,
-        null,
-        null,
-        null,
-        1,
-        1,
-        1,
         null,
         null,
         1,
         null,
         1,
-        8,
-        null,
-        null,
-        1,
-        7,
+        0,
         null,
         null
       ],
@@ -638,8 +613,14 @@
         1,
         null,
         null
+      ],
+      "/Users/trevorslater/Documents/Class_assignments/rails projects/yohol/app/models/bucket_list.rb": [
+        1,
+        1,
+        1,
+        null
       ]
     },
-    "timestamp": 1443564032
+    "timestamp": 1443567754
   }
 }
