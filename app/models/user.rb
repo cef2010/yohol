@@ -6,13 +6,7 @@ class User < ActiveRecord::Base
 
   validates :user_name, presence: true, uniqueness: true
 
-
   has_many :goals
-  
 
-  #
-  # def self.goal_finder(user)
-  #   self.where()
-  # end
 
 end

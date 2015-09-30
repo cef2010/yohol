@@ -28,13 +28,13 @@ RSpec.describe UsersController, type: :controller do
       get :show, {id: user2.id}
       expect(response).to have_http_status(:success)
     end
-    it 'finds user goals' do
-      user.goals.create(title: 'boom', description: 'goes the dynamite')
-      user2.goals.create(title: 'harry', description: 'pooter')
-      get :show, {id: user.id}
-      expect(@goals.count).to eq(1)
-      expect(@goals[0].title).to eq('boom')
-    end
+    # it 'finds user goals' do
+    #   user.goals.create(title: 'boom', description: 'goes the dynamite')
+    #   user2.goals.create(title: 'harry', description: 'pooter')
+    #   get :show, {id: user.id}
+    #   expect(.count).to eq(1)
+    #   expect(@goals[0].title).to eq('boom')
+    # end
   end
 
 

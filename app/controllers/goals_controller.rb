@@ -1,6 +1,7 @@
 class GoalsController < ApplicationController
   before_action :find_goal, only: [:show, :edit, :update, :destroy]
   def show
+    @goals = Goals.where(user_id:)
   end
 
   def edit
