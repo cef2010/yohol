@@ -1,11 +1,9 @@
 class GoalsController < ApplicationController
   before_action :find_goal, only: [:show, :edit, :update, :destroy]
   def show
-    @goals = Goals.where(user_id:)
   end
 
   def edit
-
   end
 
   def update
@@ -37,7 +35,7 @@ class GoalsController < ApplicationController
   private
 
   def goal_params
-    params.require(:goal).permit(:title, :description, :location, :price, :likes, :difficulty, :picture_file_name, :picture_content_type, :picture_file_size, :picture_updated_at)
+    params.require(:goal).permit(:user_id, :title, :description, :location, :price, :likes, :difficulty, :picture)
   end
 
   def find_goal

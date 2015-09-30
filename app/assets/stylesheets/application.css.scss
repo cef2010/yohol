@@ -14,3 +14,20 @@
  *= require_self
  */
  @import 'materialize';
+
+.goal-card {
+  margin: 4.16%;
+    @media screen and (max-width: 600px) {
+      margin: 4.16% 0 4.16% 0;
+    }
+}
+
+
+// @font-face {
+//   font-family: 'font name';
+//   src:font-url('font path');
+// }
+
+// h3 {
+// font-family: "font-name"
+// }

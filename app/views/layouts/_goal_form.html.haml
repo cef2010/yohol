@@ -1,0 +1,26 @@
+.container
+  %h1.center-align VISUALIZE YOUR GOAL
+  .row
+    = form_for @goal do |f|
+      .input-field.col.s12
+        = f.label :title
+        = f.text_field :title
+      .input-field.col.s12
+        = f.label :description
+        = f.text_area :description, class: 'materialize-textarea'
+      .input-field.col.s12
+        = f.label :location
+        = f.text_field :location
+      .input-field.col.l6.s12
+        = f.label :price
+        = f.number_field :price
+      .input-field.col.l6.s12
+        = f.label :difficulty
+        = f.number_field :difficulty
+      .col.s12
+        = f.label :picture
+        = f.file_field :picture
+        
+      = f.hidden_field :user_id, value: current_user.id
+
+      = f.submit 'Submit', class: 'btn'
