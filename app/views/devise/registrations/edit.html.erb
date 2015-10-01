@@ -5,6 +5,16 @@
   <%= devise_error_messages! %>
 
   <div class="field">
+    <%= f.label :user_name %><br />
+    <%= f.text_field :user_name, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_area :description %>
+  </div>
+
+  <div class="field">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true %>
   </div>
@@ -26,6 +36,16 @@
   <div class="field">
     <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
     <%= f.password_field :current_password, autocomplete: "off" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :days_left %><br />
+    <%= f.number_field :days_left %>
+  </div>
+
+  <div class="field">
+    <%= f.label :avatar %><br />
+    <%= f.file_field :avatar %>
   </div>
 
   <div class="actions">
