@@ -17,3 +17,6 @@
           %hr.col.s12
           %p.col.s12
             = @goal.description
+          - if @goal.user_id == current_user.id
+            %p
+              = link_to "Edit Goal", edit_goal_path(@goal.id)

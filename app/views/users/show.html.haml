@@ -1,18 +1,20 @@
-.container
-  .row
-    .center-align
-      %h5.col.s12
-      %img{src: @user.avatar.url(:med)}
+.row
+  #user-show-content.col.s10.offset-s1
+    .row{style: "margin-top: 2.5%; margin-bottom: 2.5%; padding: 2.5%; background: rgba(100, 123, 166, 0.15);"}
+      %img.col.s12.m4{src: @user.avatar.url(:med), style: "width: 300px;"}
         -# = link_to "#{@user.user.user_name}", user_path(@goal.user_id)
-
-      %h1.col.s12
-        = @user.user_name
-      %p.col.l6.s12
-        Description:
-        = @user.description
-      %p.col.l6.s12
-        Days Left:
-        = @user.days_left
-      %hr.col.s12
-      %p.col.s12
-        -# = @goal.description
+      .user-info-container.col.s12.m8
+        .row
+          %h2.col.s12
+            = @user.user_name
+          %p.col.s12
+            = @user.description
+          %p.col.s12
+            Days Left:
+            = @user.days_left
+  .col.s10.offset-s1
+    %ul
+      - @goals.each do |goal|
+        -user = goal.user
+        %li
+          = render(partial: "layouts/goal_card", locals: {goal: goal, user: user})
