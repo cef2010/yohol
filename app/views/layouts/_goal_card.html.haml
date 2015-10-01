@@ -7,5 +7,7 @@
             = link_to "#{goal.title}", goal_path(goal.id)
           %p.user-info-card.flow-text
             = link_to "a goal of #{user.user_name}", user_path(user.id)
-          %p#like-button.waves-effect.waves-light.btn.blue.lighten-2
-             Like
+          .chip.blue
+            %span.white-text
+              = link_to 'Like', vote_path(goal.id), method: :post
+              = goal.get_upvotes.size

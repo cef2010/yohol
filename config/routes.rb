@@ -6,6 +6,8 @@ Rails.application.routes.draw do
 #root
   root 'static_pages#about'
 
+  post 'goals/:id/vote', to: 'goals#vote', as: :vote
+  
 #static pages
     get '/about', to: 'static_pages#about', as: 'about'
     get '/contact', to: 'static_pages#contact', as: 'contact'
