@@ -1,16 +1,14 @@
 %body
-%div
-  %div.row
-    %div.col.s12
-      %h2.center Welcome to yohol! Check out our users
-      %br
-      %br
-      %br
+  %div
+    .row
+      .col.s12
+        %h2.center
+          You Only Have One Life
+        %hr  
 
-  %div.row
-    .col.s10.offset-s1
-      %ul
-        - @goals.each do |goal|
-          -user = goal.user
-          %li
-            = render(partial: "layouts/goal_card", locals: {goal: goal, user: user})
+      .col.s10.offset-s1
+        %ul
+          - @goals.each do |goal|
+            -user = goal.user
+            %li
+              = render(partial: "layouts/goal_card", locals: {goal: goal, user: user})

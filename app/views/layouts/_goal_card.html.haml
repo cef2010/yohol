@@ -1,9 +1,10 @@
 .goal-card.card.col.m5.s12
   .card-image
-    %img{src: goal.picture.url(:med)}
-      .card-title.center-align{style: "width: 100%; height: 100%;"}
-        .goal-content{style: "height: 33%; margin-top: 33%"}
-          %h3
+    %img{src: goal.picture.url(:med), style: "width: 100%;"}
+      .card-title.center-align.goal-content-box
+        .goal-content
+          %h3.flow-text
             = link_to "#{goal.title}", goal_path(goal.id)
-          %p
+          %p.flow-text
+            a goal of
             = link_to "#{user.user_name}", user_path(user.id)
