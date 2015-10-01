@@ -32,6 +32,13 @@ class GoalsController < ApplicationController
     redirect_to user_path(current_user)
   end
 
+  def vote
+    @goal = Goal.find(params[:id])
+    @user = current_user
+    @goal.liked_by @user
+    redirect_to users_path
+  end
+
   private
 
   def goal_params

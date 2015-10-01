@@ -6,5 +6,9 @@ class Goal < ActiveRecord::Base
   validates :title, presence: true
   validates :description, presence: true
 
+  acts_as_votable
 
+  def vote(current_user)
+    
+  end
 end
