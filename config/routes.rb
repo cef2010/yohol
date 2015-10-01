@@ -9,6 +9,7 @@ Rails.application.routes.draw do
 #static pages
     get '/about', to: 'static_pages#about', as: 'about'
     get '/contact', to: 'static_pages#contact', as: 'contact'
+    post '/contact', to: 'static_pages#submit_contact_info', as: 'submit'
     get '/faq', to: 'static_pages#faq', as: 'faq'
 
  #crud

@@ -1,2 +1,45 @@
-%h1 StaticPages#contact
-%p Find me in app/views/static_pages/contact.html.haml
+
+= form_tag submit_path, method: 'post' do
+  .container
+    .row
+      .col.s12.m6
+        .row
+          .input-field.col.s12.materialize-textarea
+            = label_tag :contact_name, 'Name (required)'
+            = text_field_tag :contact_name
+  
+         
+    .row
+      .col.s12.m6
+        .row
+          .input-field.col.s12.materialize-textarea
+            = label_tag :contact_phone, 'Phone (optional)'
+            = text_field_tag :contact_phone
+        
+    .row
+      .col.s12.m6
+        .row
+          .input-field.col.s12.materialize-textarea
+            = label_tag :contact_email, 'Email (required)'
+            = text_field_tag :contact_email
+        
+        Please Select Reason for Contact:
+        %p
+          %input#request.with-gap{:name => "group1", :type => "radio", value: 'request'}/
+          %label{:for => "request"} Requesting Information
+        %p
+          %input#test4.with-gap{:name => "group1", :type => "radio", value: 'technical'}/
+          %label{:for => "test4"} Technical Issue
+        %p
+          %input#test5.with-gap{:name => "group1", :type => "radio", value: 'other'}/
+          %label{:for => "test5"} Other (please specify below)
+        
+          //TODO fix materialize styling of text-area.
+        .row
+          .input-field.col.s12.m12
+            = label_tag :contact_us, 'Send us a message'
+            = text_area_tag :contact_us, class: "materialize-textarea" 
+
+            %button.btn.waves-effect.waves-light{:name => "action", :type => "submit"} Submit
+
+            / = submit_tag 'Submit'
