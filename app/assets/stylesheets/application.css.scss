@@ -46,6 +46,22 @@
   padding-left: 0 !important;
   padding-right: 0 !important;
 }
+#goal-show-page {
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 810px;
+  display: flex;
+  flex-direction: column;
+}
+#goal-show-content {
+  flex: 1;
+  background: rgba(83, 83, 83, 0.35);
+  color: white;
+}
+#goal-show-content .container {
+  padding-top: 10%;
+}
 
 a {
   color: white;
