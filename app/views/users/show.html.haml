@@ -1,1 +1,18 @@
+.container
+  .row
+    .center-align
+      %h5.col.s12
+      %img{src: @user.avatar.url(:med)}
+        -# = link_to "#{@user.user.user_name}", user_path(@goal.user_id)
 
+      %h1.col.s12
+        = @user.user_name
+      %p.col.l6.s12
+        Description:
+        = @user.description
+      %p.col.l6.s12
+        Days Left:
+        = @user.days_left
+      %hr.col.s12
+      %p.col.s12
+        -# = @goal.description

@@ -8,5 +8,24 @@
         = link_to "FAQ", faq_path
       %li
         = link_to "Contact", contact_path
-      %li
-        =link_to "New Goal", new_goal_path(current_user.id)
+    - if user_signed_in?
+      %ul#nav-mobile.left.hide-on-med-and-down
+        %li
+          =link_to "New Goal", new_goal_path(current_user.id)
+        %li
+          = link_to 'Sign Out', destroy_user_session_path, :method => :delete
+
+
+-#           <nav>
+-#   <div class="nav-wrapper">
+-#     <a href="#" class="brand-logo">SCHOOL!!</a>
+-#     <ul id="nav-mobile" class="right hide-on-med-and-down">
+-#       <% if student_signed_in? %>
+-#         <li><%= link_to 'Log Out', destroy_student_session_path, method: :delete %></li>
+-#       <% else %>
+-#         <li><%= link_to 'Log In', new_student_session_path %></li>
+-#         <li><%= link_to('Register', new_student_registration_path)  %></li>
+-#       <% end %>
+-#     </ul>
+-#   </div>
+-# </nav>
