@@ -8,10 +8,6 @@ class UsersController < ApplicationController
     @goals = Goal.where(user_id: @user.id)
   end
 
-
-
-
-
   private
 
   def user_params
