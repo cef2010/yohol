@@ -9,6 +9,6 @@ class Goal < ActiveRecord::Base
   acts_as_votable
 
   def vote(current_user)
-    
+
   end
 end
